@@ -15,29 +15,40 @@
 		body {
 			background: #60B8BF;
 		}
-    marquee {
-      color: white;
-    }
-    img.tongue_out {
-      width: 12.6%;
-    }
-    img.thats_so_trigger {
-      width: 40%;
-    }
-    img.wall_face {
-      width: 16.8%;
-    }
-    img.derp_boi {
-      width: 25%;
-    }
-    .right_align {
-      float: right;
-    }
-    .right2_align {
-      float: right;
-    }
-    .center_align {
-      text-align: center;
+
+		marquee {
+			color: white;
+		}
+
+		img.tongue_out {
+			width: 12.6%;
+		}
+
+		img.thats_so_trigger {
+			width: 40%;
+		}
+
+		img.wall_face {
+			width: 16.8%;
+		}
+
+		img.derp_boi {
+			width: 25%;
+		}
+
+		.right_align {
+			float: right;
+		}
+
+		.right2_align {
+			float: right;
+		}
+
+		.too_center {
+			text-align: center;
+			font-size: 22;
+		}
+    .lefty {
       font-size: 22;
     }
 	</style>
@@ -50,7 +61,10 @@
     <marquee behavior="scroll" direction="left" scrollamount="20">trigger</marquee>
      <marquee behavior="scroll" direction="left" scrollamount="30">trigger</marquee>
       <marquee behavior="scroll" direction="up" scrollamount="1">trigger</marquee>
-      <marquee behavior="scroll" direction="up" scrollamount="8"><p class="center_align">i luv my dog</p></marquee>
+      <p>
+        <marquee class="too_center" behavior="scroll" direction="up" scrollamount="4"> i luv my dog</marquee>
+        <marquee class="lefty" behavior="scroll" direction="down" scrollamount="4"> i luv my dog</marquee>
+        </p>
     <img class="thats_so_trigger" src="https://cloud-dr42glpei-hack-club-bot.vercel.app/0thatssotrigger.jpeg"/>
     <img class="tongue_out" src="https://cloud-jfqikmjoq-hack-club-bot.vercel.app/0image_from_ios__1_.png"/>
     <img class="wall_face"
