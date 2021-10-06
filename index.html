@@ -2,6 +2,8 @@
 <html>
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</meta>
 	<style>
 		h1 {
 			color: gray;
@@ -66,13 +68,16 @@
 			border-radius: 5px
 		}
 
-    iframe {
-      border-style: inset;
-      border-width: 5px;
+		iframe {
+			border-style: inset;
+			border-width: 5px;
 
-    }
-
+		}
 	</style>
+  <script>
+      function myFunction() {
+    document.getElementById("demo").innerHTML = "No";}
+    </script>
 </head>
 
 <body>
@@ -82,9 +87,9 @@
     <marquee behavior="scroll" direction="left" scrollamount="20">trigger</marquee>
      <marquee behavior="scroll" direction="left" scrollamount="30">trigger</marquee>
      <hr>
-    <button><strong>Apply</strong></button>
-    <button><span class="button1"><b>BUTTON</b></span></button>
-    <hr
+    <p id="demo">Apply for a Trigger</p>
+    <button type="button" onclick="myFunction()">Apply</button>
+    <hr>
     <p>Here is a quote from Melanie about her perfect potato</p>
     <blockquote>She loves him more than <b>life</b> itself. However he is sometimes a pain in the ass and makes me sad inside because I swear to god he has a death wish. Like the time he ate 18 chocolate balls. Or tinfoil. Or plastic. Or I shit you not, a fucking blu ray player. </blockquote>
     <p>Mel's goal is: <q>Stop him from dying</q></p>
