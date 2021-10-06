@@ -73,10 +73,15 @@
 			border-width: 5px;
 
 		}
+
+    button {
+      color: #FFFFFF;
+      background: #B10AC1;
+    }
 	</style>
   <script>
       function myFunction() {
-    document.getElementById("demo").innerHTML = "No";}
+    document.getElementById("trigbutton").innerHTML = "Just Don't";}
     </script>
 </head>
 
@@ -87,8 +92,8 @@
     <marquee behavior="scroll" direction="left" scrollamount="20">trigger</marquee>
      <marquee behavior="scroll" direction="left" scrollamount="30">trigger</marquee>
      <hr>
-    <p id="demo">Apply for a Trigger</p>
-    <button type="button" onclick="myFunction()">Apply</button>
+    <p id="trigbutton">Apply for a Trigger</p>
+    <button type="button" onclick="myFunction()"><b>Apply</b></button>
     <hr>
     <p>Here is a quote from Melanie about her perfect potato</p>
     <blockquote>She loves him more than <b>life</b> itself. However he is sometimes a pain in the ass and makes me sad inside because I swear to god he has a death wish. Like the time he ate 18 chocolate balls. Or tinfoil. Or plastic. Or I shit you not, a fucking blu ray player. </blockquote>
