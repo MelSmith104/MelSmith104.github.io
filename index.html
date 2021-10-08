@@ -79,10 +79,84 @@
 			background: #B10AC1;
 		}
 
-    h2 {
-      font-family: Optima;
-    }
-    ]
+		h2 {
+			font-family: Optima;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		img {
+			vertical-align: middle;
+		}
+
+		.containor {
+			position: relative;
+		}
+
+		.mySlides {
+			display: none;
+		}
+
+		.cursor {
+			cursor: pointer;
+		}
+
+		.prev .next {
+			cursor: pointer;
+			position: relative;
+			top: 40%;
+			width: auto;
+			padding: 16px;
+			margin-top: -50px;
+			color: white;
+			font-weight: bold;
+			font-size: 20px;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+			-webkit- user-select: none;
+		}
+
+		.next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		.numbertext {
+			color: #f2f2f2;
+			font-size: 12px;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+		}
+
+		.caption-containor {
+			text-align: center;
+			background-color: #222;
+			padding: 2px 16px;
+			color: white;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.column {
+			float: left;
+			width: 16.66%;
+		}
+
+		.demo {
+			opacity: 0.6;
+		}
+
+		.active,
+		.demo:hover {
+			opacity: 1;
+		}
 	</style>
 	<script>
 		function myFunction() {
@@ -143,8 +217,8 @@
   <p><h3>His favorite song is Crazy Train by Ozzy Osborne</h3></p>
   <iframe src="https://en.wikipedia.org/wiki/Crazy_Train" height="300" width="100%" title="Crazy Train"></iframe>
   <hr>
-  <p id="demo"></p>
-  <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display date and time></button>
+  <p id="date"></p>
+  <button type="button" onclick="document.getElementById('date').innerHTML = Date()">Click me to display date and time></button>
   <hr>
 
   <button onclick="document.getElementById('my image').src='https://cloud-ebrh7pvza-hack-club-bot.vercel.app/0733902c905.png'">Hey there</button>
@@ -171,7 +245,82 @@
       <img src="https://cloud-clt3mupwj-hack-club-bot.vercel.app/0image_from_ios.jpg" style="width:100%">
     </div>
 
-    
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="https://cloud-ght59ox99-hack-club-bot.vercel.app/0image_from_ios.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="https://cloud-bk5sm7gzu-hack-club-bot.vercel.app/0image_from_ios.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 /6</div>
+      <img src="https://cloud-20xfzr87l-hack-club-bot.vercel.app/0image000000.jpg">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="https://cloud-l36qrvxev-hack-club-bot.vercel.app/0trigsmile.jpeg" style="width:100%" onclick="currentSlide(1)" alt="smile">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="https://cloud-af3dr1go3-hack-club-bot.vercel.app/0image_from_ios.jpg" style="width:100%" onclick="currentSlide(2)" alt="nosmile">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="https://cloud-clt3mupwj-hack-club-bot.vercel.app/0image_from_ios.jpg" style="width:100%" onclick="currentSlide(3)" alt="sleeps">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="https://cloud-ght59ox99-hack-club-bot.vercel.app/0image_from_ios.jpg" style="width:100%" onclick="currentSlide(4)" alt="heythere">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="https://cloud-bk5sm7gzu-hack-club-bot.vercel.app/0image_from_ios.jpg" style="width:100%" onclick="currentSlide(5)" alt="what">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="https://cloud-20xfzr87l-hack-club-bot.vercel.app/0image000000.jpg" style="width:100%" onclick="currentSlide(6)" alt="lake">
+      </div>
+    </div>
+  </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
   </body>
 </html>
